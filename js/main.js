@@ -8,14 +8,14 @@ function getFetch(){
   
   const img = document.querySelector('img');
   const iframe = document.querySelector('iframe');
-  const p = document.querySelector('p');
+  const descriptionContainer = document.querySelector('#descriptionContainer');
   
   img.style.display = 'block'; 
   iframe.style.display = 'none'
-  p.style.display = 'block';
+  descriptionContainer.style.display = 'block';
 
   if (!choice) {
-    document.querySelector('p').innerText = 'Please select a date that is not in the future.'
+    document.querySelector('#descriptionContainer').innerText = 'Please select a date that is not in the future.'
   } else {
     fetch(url)
       .then(res => {
@@ -37,10 +37,10 @@ function getFetch(){
         }
         document.querySelector("img").src = data.url;
         document.querySelector("iframe").src = data.url;
-        document.querySelector("p").innerText = data.explanation;
+        document.querySelector("#descriptionContainer").innerText = data.explanation;
       })
       .catch(err => {
         console.log(`error ${err}`);
-        document.querySelector("p").innerText = "Please select a valid date";
+        document.querySelector("#descriptionContainerp").innerText = "Please select a valid date";
       });
     }}

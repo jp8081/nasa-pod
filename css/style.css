@@ -52,7 +52,6 @@ h1, h2{
 }
 
 p {
-  display: none;
   text-align: center;
   margin-bottom: 1rem;
   line-height: 130%;
@@ -102,4 +101,11 @@ h3 {
 
 .date-container{
   margin-bottom: 20px;
+}
+
+.descriptionContainer{
+  padding: 15px;
+  background-color: #f8f8f8;
+  display: none;
+  border-radius: 4px;
 }
