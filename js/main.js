@@ -41,6 +41,6 @@ function getFetch(){
       })
       .catch(err => {
         console.log(`error ${err}`);
-        document.querySelector("#descriptionContainerp").innerText = "Please select a valid date";
+        document.querySelector("#descriptionContainer").innerText = "Please select a valid date";
       });
     }}
